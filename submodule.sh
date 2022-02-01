@@ -11,7 +11,7 @@ then
     if [ $answer = 1 ]
     then
 
-        git submodule update --remote $link
+        git submodule update --remote
 
         git add .
 

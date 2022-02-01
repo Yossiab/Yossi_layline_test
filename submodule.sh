@@ -6,7 +6,7 @@ read name
 echo "would you like to update your submodule [1] , add a new one [2] , or push your changes [3]? "
 read answer
 
-if [ $answer = 1 ] || [ $answer = 2 ] || [ $answer = 3 ]
+if [ $answer = 1 ] || [ $answer = 3 ] || [ $answer = 2 ]
 then
     if [ $answer = 1 ]
     then

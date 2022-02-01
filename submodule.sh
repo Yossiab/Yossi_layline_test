@@ -10,7 +10,8 @@ if [ $answer = 1 ] || [ $answer = 2 ] || [ $answer = 3 ]
 then
     if [ $answer = 1 ]
     then
-
+        git pull
+        
         git submodule update --remote
 
         git add .

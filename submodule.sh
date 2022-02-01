@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+echo "Please enter your name: "
+read name
+
+echo "would you like to update your submodule [1] or add a new one [2]? "
+read answer
+
+if [ $answer = 1 ] || [ $answer = 2 ]
+then
+    if [ $answer = 1 ]
+    then
+        echo "Please paste the link of the submodule you would like to update: "
+        read link
+
+        git submodule update --remote $link
+
+        git add .
+
+        git commit -m "Updated by $name"
+
+        git push
+    fi
+
+
+    if [ $answer = 2 ]
+        then
+        echo "PLease enter the link to the git submodule you would like to add: "
+        read sub_link
+
+
+        DATE=$(date)
+
+        git submodule add $sub_link
+
+        git commit -m "Submodule added by $name on $DATE"
+
+        git push
+    fi
+else
+    echo "Invalid entry"
+fi
+

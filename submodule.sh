@@ -44,7 +44,7 @@ then
 
         git push
 
-        cd ./
+        cd ../
 
         git add .
 

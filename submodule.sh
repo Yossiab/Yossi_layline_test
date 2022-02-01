@@ -6,8 +6,6 @@ read name
 echo "would you like to update your submodule [1] , add a new one [2] , or push your changes [3]? "
 read answer
 
-if [ $answer = 1 ] || [ $answer = 3 ] || [ $answer = 2 ]
-then
     if [ $answer = 1 ]
     then
         git pull
@@ -19,10 +17,7 @@ then
         git commit -m "Updated by $name"
 
         git push
-    fi
-
-
-    if [ $answer = 2 ]
+    elif [ $answer = 2 ]
     then
         echo "PLease enter the link to the git submodule you would like to add: "
         read sub_link
@@ -35,9 +30,7 @@ then
         git commit -m "Submodule added by $name on $DATE"
 
         git push
-    fi
-
-    if [ $answer = 3 ]
+    elif [ $answer = 3 ]
     then
         git add .
 
@@ -52,7 +45,6 @@ then
         git commit -m "commited by $name"
 
         git push
-    fi
-else
+    else
     echo "$answer Invalid entry "
-fi
+    fi

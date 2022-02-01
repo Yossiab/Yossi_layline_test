@@ -3,10 +3,10 @@
 echo "Please enter your name: "
 read name
 
-echo "would you like to update your submodule [1] or add a new one [2]? "
+echo "would you like to update your submodule [1] , add a new one [2] , or push your changes [3]? "
 read answer
 
-if [ $answer = 1 ] || [ $answer = 2 ]
+if [ $answer = 1 ] || [ $answer = 2 ] || [ $answer = 3 ]
 then
     if [ $answer = 1 ]
     then
@@ -22,7 +22,7 @@ then
 
 
     if [ $answer = 2 ]
-        then
+    then
         echo "PLease enter the link to the git submodule you would like to add: "
         read sub_link
 
@@ -35,6 +35,23 @@ then
 
         git push
     fi
+
+    if [ $answer = 3 ]
+    then
+        git add .
+
+        git commit -m "commited by $name"
+
+        git push
+
+        cd ./
+
+        git add .
+
+        git commit -m "commited by $name"
+
+        git push
+    fi
 else
-    echo "Invalid entry"
+    echo "Invalid entry $answer"
 fi

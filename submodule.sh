@@ -3,7 +3,7 @@
 echo "Please enter your name: "
 read name
 
-echo "would you like to update your submodule [1] , add a new one [2] , or push your changes [3]? "
+echo "would you like to update your submodule [1] , add a new one [2] , or push your changes (from within the submodule)[3]? "
 read answer
 
     if [ $answer = 1 ]

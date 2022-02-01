@@ -10,8 +10,6 @@ if [ $answer = 1 ] || [ $answer = 2 ]
 then
     if [ $answer = 1 ]
     then
-        echo "Please paste the link of the submodule you would like to update: "
-        read link
 
         git submodule update --remote $link
 
@@ -40,4 +38,3 @@ then
 else
     echo "Invalid entry"
 fi
-

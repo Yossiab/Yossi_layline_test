@@ -11,7 +11,7 @@ then
     if [ $answer = 1 ]
     then
         git pull
-        
+
         git submodule update --remote
 
         git add .
@@ -54,5 +54,5 @@ then
         git push
     fi
 else
-    echo "Invalid entry $answer"
+    echo "$answer Invalid entry "
 fi
